@@ -1,0 +1,19 @@
+Cubic - M.Ali VARDAR 2004
+1993-1996 yillari arasinda yazdigim basit uygulamalri toplayip svgalib 
+kutupahesini kullanarak linux altinda bir intro yazamaya karar verdim.
+Ayni zamanda mucus dizini icinde eski yazdigim kodlarida bulabilrsiniz.
+Eski kodlarim hakkinda bir soru sormayin cevaplamayacagim. 
+
+Cubic benim iki aksamima mal oldu umarim begenirsiniz.
+
+derlemek icin
+make
+make final
+
+yazarsaniz uygulama geleneksel linux introlari icin yapilan sikistirma
+yonetimini kullanip dosyayi kucultur.
+
+Uygulama GPL lisansi altinda dagitilabilir. 
+
+M.Ali VARDAR
+
