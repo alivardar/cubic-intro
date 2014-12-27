@@ -2,7 +2,7 @@
 all:     cubic
 
 cubic:	main.c
-	gcc -w -Wall -o cubic main.c -I/usr/local/include -I/usr/include -L/usr/local/lib/ -L/usr/lib -lvga -lvgagl
+	gcc -w -Wall -o cubic main.c -lm -lvga -lvgagl
 
 main.o:		main.c
 
