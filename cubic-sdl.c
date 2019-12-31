@@ -122,8 +122,7 @@ void kup_ciz()
     for (t=1;t<=12;t++) {
       m=150+a[q[t-1]-1][0]; n=100+a[q[t-1]-1][1];
       g=150+a[p[t-1]-1][0]; h=100+a[p[t-1]-1][1];
-      //vga_drawline((int)m, (int)n, (int)g, (int)h);
-	  //al_draw_line((int)m, (int)n, (int)g, (int)h, al_map_rgb(255,0,0), 5);
+      SDL_RenderDrawLine(renderer, (int)m, (int)n, (int)g, (int)h);
 	}
     en++; boy++;
 }
@@ -147,6 +146,7 @@ void k_barciz() {
 		//vga_setcolor(i+63); 
 		//vga_drawline( 0, satir+i, 319, satir+i); 
 		//al_draw_line( 0, satir+i, 319, satir+i, al_map_rgb(255,255,0), 1);
+		SDL_RenderDrawLine(renderer, 0, satir+i, 319, satir+i);
 	}
 	 
 	 if ( (satir<40) && (asagi==0) ) asagi=1;
@@ -160,6 +160,7 @@ void m_barciz() {
 		//vga_setcolor(i+76); 
 		//vga_drawline( 0, satirm+i, 319, satirm+i); 
 		//al_draw_line(  0, satirm+i, 319, satirm+i, al_map_rgb(255,255,0), 2);
+		SDL_RenderDrawLine(renderer, 0, satirm+i, 319, satirm+i);
 	}
  
 	if ( (satirm<40) && (asagim==0) ) asagim=1;
@@ -176,10 +177,12 @@ int main(int argc, char *argv[])
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
     SDL_RenderClear(renderer);
     SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+	
     
 	for (i = 0; i < WINDOW_WIDTH; ++i)
         SDL_RenderDrawPoint(renderer, i, i);
     
+	anaveri();
 	yildiz();
 	
 	SDL_RenderPresent(renderer);
@@ -189,10 +192,11 @@ int main(int argc, char *argv[])
 		 SDL_RenderClear(renderer);
 
 		yildiz_kaydir();
+		k_barciz();
+		 kup_ciz();
 		SDL_RenderPresent(renderer);
-		
-		SDL_Delay(100);
-		
+		m_barciz();
+		SDL_Delay(50);
 		
         if (SDL_PollEvent(&event) && event.type == SDL_QUIT)
             break;
