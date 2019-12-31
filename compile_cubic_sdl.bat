@@ -1,0 +1,1 @@
+gcc -IC:\MinGW\include -IC:\MinGW\include\SDL2 -LC:\MinGW\lib -o cubic-sdl cubic-sdl.c  -lm -lSDL2
