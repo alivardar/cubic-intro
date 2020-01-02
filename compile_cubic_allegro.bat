@@ -1,1 +1,0 @@
-gcc -IC:\MinGW\include\allegro5 -LC:\MinGW\lib -static -o cubic-allegro cubic-allegro.c  -lm -lallegro-5.0.10-mt -lallegro_color-5.0.10-mt -lallegro_primitives-5.0.10-mt -lallegro_physfs-5.0.10-mt
